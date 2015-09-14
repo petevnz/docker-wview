@@ -20,8 +20,8 @@ RUN apt-get update
 # RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 
 # Add wview to the repository sources list
-RUN echo 'deb http://www.wviewweather.com/apt/saucy dist main' > /etc/apt/sources.list.d/wview.list
-RUN echo 'deb-src http://www.wviewweather.com/apt/ dist main' > /etc/apt/sources.list.d/wview.list
+RUN echo 'deb http://www.wviewweather.com/apt/trusty trusty main' > /etc/apt/sources.list.d/wview.list
+RUN echo 'deb-src http://www.wviewweather.com/apt/trusty trusty main' > /etc/apt/sources.list.d/wview.list
 
 # Update the repository sources list once more
 RUN apt-get update
