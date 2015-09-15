@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to Ubuntu
-FROM ubuntu:trusty
+FROM Dockerfile/ubuntu
 
 # File Author / Maintainer
 MAINTAINER Pete Valentine
