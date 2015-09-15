@@ -9,9 +9,6 @@ FROM ubuntu
 # File Author / Maintainer
 MAINTAINER Pete Valentine
 
-# Update the repository sources list
-RUN apt-get update
-
 ################## BEGIN INSTALLATION ######################
 # Install wview from deb source
 # Ref: http://www.wviewweather.com/release-notes/wview-User-Manual.html#Installation-debian
@@ -23,11 +20,8 @@ RUN apt-get update
 RUN echo 'deb http://www.wviewweather.com/apt/trusty trusty main' > /etc/apt/sources.list.d/wview.list
 RUN echo 'deb-src http://www.wviewweather.com/apt/trusty trusty main' > /etc/apt/sources.list.d/wview.list
 
-# Update the repository sources list once more
-RUN apt-get update
-
-# Install wview package (.deb)
-RUN apt-get install -y wview
+# Update the repository sources list once more and Install wview package (.deb)
+RUN apt-get update && apt-get install -y wview
 
 ##################### INSTALLATION END #####################
 
@@ -40,4 +34,4 @@ CMD ["--port 80"]
 CMD ["--port 443"]
 
 # Set default container command
-ENTRYPOINT /etc/init.d/wview
+ENTRYPOINT /var/wview/wviewd
