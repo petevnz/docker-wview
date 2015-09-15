@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to Ubuntu
-FROM Dockerfile/ubuntu
+FROM dockerfile/ubuntu
 
 # File Author / Maintainer
 MAINTAINER Pete Valentine
