@@ -21,7 +21,9 @@ RUN echo 'deb http://www.wviewweather.com/apt/trusty trusty main' > /etc/apt/sou
 RUN echo 'deb-src http://www.wviewweather.com/apt/trusty trusty main' > /etc/apt/sources.list.d/wview.list
 
 # Update the repository sources list once more and Install wview package (.deb)
-RUN apt-get update && apt-get install -y wview
+RUN \
+   apt-get update && \
+   apt-get install -y wview
 
 ##################### INSTALLATION END #####################
 
