@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to Ubuntu
-FROM dockerfile/nginx
+FROM nginx
 
 # File Author / Maintainer
 MAINTAINER Pete Valentine
