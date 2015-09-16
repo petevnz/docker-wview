@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image to Ubuntu
-FROM dockerfile/ubuntu
+FROM dockerfile/nginx
 
 # File Author / Maintainer
 MAINTAINER Pete Valentine
@@ -29,9 +29,8 @@ RUN apt-get update && apt-get install -y wview
 EXPOSE 80
 EXPOSE 443
 
-# Default port to execute the entrypoint (http)
-CMD ["--port 80"]
-CMD ["--port 443"]
+WORKDIR /etc/nginx
 
-# Set default container command
-ENTRYPOINT /var/wview/wviewd
+# Default cmd to execute the entrypoint (http)
+CMD ["nginx"]
+
