@@ -17,8 +17,8 @@ MAINTAINER Pete Valentine
 # RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 
 # Add wview to the repository sources list
-RUN echo 'deb http://www.wviewweather.com/apt/trusty trusty main' >> /etc/apt/sources.list.d/wview.list
-RUN echo 'deb-src http://www.wviewweather.com/apt/trusty trusty main' >> /etc/apt/sources.list.d/wview.list
+RUN echo 'deb http://www.wviewweather.com/apt/saucy saucy main' >> /etc/apt/sources.list.d/wview.list
+RUN echo 'deb-src http://www.wviewweather.com/apt/saucy saucy main' >> /etc/apt/sources.list.d/wview.list
 
 # Update the repository sources list once more and Install wview package (.deb)
 RUN \
@@ -35,4 +35,3 @@ WORKDIR /etc/nginx
 
 # Default cmd to execute the entrypoint (http)
 CMD ["nginx"]
-
